@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+  
+</head>
+<body>
+  <div class="container1">
+    <div class="div-left">
+      <img src="./images/bg-main-desktop.png">
+    </div>
+
+    <div class="div-cards">
+      <div class="frontcard">
+          <img src="./images/bg-card-front.png">
+
+          <div class="frontcard-text">
+              <div class="frontcard-text-bubbles">
+                <div class="bubble1"></div>
+                <div class="bubble2"></div>
+              </div>
+              <div class="frontcard-text-cardnumber">
+                0000 0000 0000 0000
+              </div>
+              <div class="frontcard-text-last">
+                <p class="frontcard-text-name">JANE APPLESEED</p>
+                <div class="frontcard-text-date">
+                  <p>00</p>
+                  <p>/</p>
+                  <p>00</p>
+                
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="div-space"></div>
+      <div class="backcard">
+        <img src="./images/bg-card-back.png">
+        <div class="backcard-text">
+          000
+        </div>
+      </div>
+    </div>
+
+
+    <div class="div-right">
+      <form>
+        <label for="name" >CARDHOLDER NAME</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" id="name">
+        <p class="warning w1">Can't be blank</p>
+        <label for="cardnumber" >CARD NUMBER</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="cardnumber">
+        
+        <p class="warning w2">Wrong format, numbers only</p>
+        <p class="warning w3">Can't be blank</p>
+        <p class="warning w7">Invalid input</p>
+        <div class="row">
+          <div class="row-left">
+              <label for="expdate1" >EXP. DATE (MM/YY)</label>
+              <div class="row-left-inputs">
+                <input type="text" placeholder="MM" id="expdate1">
+                <input type="text" placeholder="YY" id="expdate2">
+              </div>
+              <p class="warning w4">Can't be blank</p>
+          </div>
+          <div class="row-right">
+            <label for="cvc" >CVC</label>
+            <div class="row-right-inputs">
+              <input type="text" placeholder="e.g. 123" id="cvc">
+              <p class="warning w5">Can't be blank</p>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="confirm">Confirm</button>
+      </form>
+    </div>
+
+    <!--------------------  COMPLETE STATE --------------------------->
+    <div class="div-right2">
+      <div class="okey">
+        <img src="./images/icon-complete.svg">
+      </div>
+      <h2>THANK YOU!</h2>
+      <p>We've added your card details</p>
+      <button type="submit" class="confirm continue">Continue</button>
+    </div>
+    
+    
+  </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/iremcagin">İrem Çağın Yurttürk</a>.
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

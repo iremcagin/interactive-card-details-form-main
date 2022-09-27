@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    height: 100vh;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Space Grotesk", sans-serif;
+    padding: 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.attribution {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+    text-align: center;
+    color: rgb(214, 214, 214);
+}
+
+.attribution a {
+    color: rgba(33, 9, 47, 0.682);
+}
+
+.container1 {
+    display: flex;
+    position: relative;
+    height: 99.9vh;
+    width: 100%;
+}
+
+.div-left {
+    width: 35%;
+    height: 100%;
+}
+
+.frontcard {
+    position: relative;
+    color: white;
+}
+
+.frontcard-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 5%;
+    padding: 22px;
+}
+
+.frontcard-text-bubbles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.bubble1 {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.bubble2 {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+}
+
+.frontcard-text-cardnumber {
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.frontcard-text-last {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.frontcard-text-last p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.frontcard-text-date {
+    display: flex;
+}
+
+.frontcard-text-date p{
+    
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    
+}
+
+.div-space {
+    height: 30px;
+}
+
+.backcard {
+    margin-left: 90px;
+    position: relative;
+}
+
+.backcard-text {
+    right: 14%;
+    bottom: 47%;
+    text-align: end;
+    position: absolute;
+    color: white;
+}
+
+.div-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.div-right form {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 38%;
+    height: 100%;
+}
+
+.form label {
+    color: rgb(33, 9, 47);
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.row-left {
+    width: 50%;
+}
+
+.row-left-inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-left-inputs input {
+    width: 30%;
+}
+
+
+form input::placeholder{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17px;
+    color: hsl(279, 6%, 55%);
+}
+
+form input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: rgb(33, 9, 47);
+    padding: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(222, 221, 223);
+    border-image: initial;
+    border-radius: 8px;
+}
+
+.warning {
+    color: rgb(255, 82, 82);
+    font-size: 13px;
+    margin-top: -13px;
+    margin-bottom: 13px;
+}
+
+.form label {
+    color: rgb(33, 9, 47);
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm {
+    margin-top: 28px;
+    height: 49px;
+    font-size: 16px;
+    background-color: rgb(33, 9, 47);
+    color: rgb(222, 221, 223);
+    border-radius: 8px;
+}
+
+.div-right2 {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.okey {
+    margin-bottom: 20px;
+}
+
+.div-right2 h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.div-right2 p {
+    font-size: 17px;
+    color: rgb(142, 133, 147);
+}
+
+.continue {
+    width: 38%;
+}
+
+.div-left img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.div-cards {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    left: 10%;
+    right: 0px;
+}
+
+/* ------------------------- HOVER -------------------------------- */
+.confirm{
+    cursor: pointer;
+}
+
+form input:focus{
+    outline: none;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+
+
+/* ------------------------- RESPONSIVE -------------------------------- */
+@media only screen and (max-width: 1230px){
+    .frontcard {
+        width: 60%;
+    }
+
+    .frontcard-text {
+        width: 80%;
+    }
+    
+    .frontcard img {
+        width: 100%;
+    }
+
+    .frontcard-text-bubbles {
+        margin-bottom: 40px;
+    }
+    .frontcard-text-cardnumber {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    .frontcard-text-last {
+        font-size: 12px;
+    }
+
+    .frontcard {
+        position: relative;
+        color: white;
+    }
+
+    .div-cards {
+        left: -8%;
+        align-items: center;
+    }
+    .backcard {
+        margin-left: 90px;
+        position: relative;
+    }
+
+    .backcard {
+        width: 60%;
+    }
+
+    .backcard-text {
+        font-size: 14px;
+        bottom: 47%;
+        right: 14%;
+        text-align: end;
+        position: absolute;
+        color: white;
+    }
+
+    .backcard img {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 900px){
+    .div-right form {
+        width: 80%;
+        margin-left: 0px;
+    }
+
+    .backcard {
+        width: 50%;
+    }
+    .frontcard-text {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .frontcard {
+        width: 50%;
+    }
+
+    .frontcard {
+        z-index: 1;
+        top: 57%;
+        left: -30%;
+    }
+
+    .div-left {
+        width: 100%;
+        height: 30%;
+    }
+
+    .div-cards {
+        height: 30%;
+        left: 8%;
+        top: 0%;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .frontcard img {
+        width: 100%;
+    }
+    
+    .frontcard-text-bubbles {
+        margin-bottom: 40px;
+    }
+
+    .bubble1 {
+        width: 30px;
+        height: 30px;
+    }
+    .bubble2 {
+        width: 12px;
+        height: 12px;
+    }
+
+    .frontcard-text-cardnumber {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    .frontcard-text-last {
+        margin-top: -10px;
+        font-size: 12px;
+    }
+
+    .backcard {
+        right: 25%;
+        top: -50%;
+    }
+    .backcard img {
+        width: 100%;
+    }
+    .backcard-text {
+        font-size: 14px;
+        bottom: 47%;
+        right: 13%;
+    }
+
+    .div-right form label {
+        font-size: 12px;
+    }
+
+    .div-right2 {
+        margin-left: 0;
+    }
+    
+}
+
